@@ -123,7 +123,7 @@ fun Ring() {
                 }
                 HorizontalDivider(
                     modifier = Modifier.padding(start = 12.dp, end = 8.dp),
-                    thickness = 2.dp,
+                    thickness = 3.dp,
                     color = colorResource(R.color.magenta)
                 )
             }
