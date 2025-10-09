@@ -43,6 +43,9 @@ fun Ring() {
     var isSearch by remember { mutableStateOf(false) }
     var search by remember { mutableStateOf("") }
     var showMenu by remember { mutableStateOf(false) }
+    var ringitem = listOf(
+        RingItem(image = R.drawable.studentdpimage,name = "Devloper", day = "Today",time = "3:00 P.M")
+    )
 
     Scaffold(topBar = {
         Box(
@@ -123,7 +126,7 @@ fun Ring() {
                 }
                 HorizontalDivider(
                     modifier = Modifier.padding(start = 12.dp, end = 8.dp),
-                    thickness = 3.dp,
+                    thickness = 2.dp,
                     color = colorResource(R.color.magenta)
                 )
             }
