@@ -86,7 +86,6 @@ fun HomeScreen(navHostController: NavHostController) {
                     modifier = Modifier
                         .size(55.dp)
                         .clip(RoundedCornerShape(20))
-                        .clickable(onClick = { "" })
                 )
 
             }

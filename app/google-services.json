@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "158279939721",
+    "project_id": "chatspark-77dfd",
+    "storage_bucket": "chatspark-77dfd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158279939721:android:a203db3824eccb43607858",
+        "android_client_info": {
+          "package_name": "com.devanshu.whatsappclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKECPFWM0F9C6bcurfisjqK_Zf2LC-yJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

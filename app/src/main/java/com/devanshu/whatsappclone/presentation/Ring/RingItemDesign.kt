@@ -8,9 +8,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -20,14 +24,12 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.glance.layout.Spacer
 import com.devanshu.whatsappclone.R
 
 @Composable
-fun RingItemDesign(RingItem : RingItem) {
+fun RingItemDesign(RingItem: RingItem) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(12.dp)) {
         Image(
             painter = painterResource(RingItem.image),
@@ -48,6 +50,19 @@ fun RingItemDesign(RingItem : RingItem) {
             )
             Spacer(modifier = Modifier.size(4.dp))
             Row {
+
+                Icon(
+                    painter = painterResource(R.drawable.baseline_call_missed),
+                    contentDescription = "Incoming_Call_Icon",
+                    modifier = Modifier.size(16.dp),
+                    tint = if(RingItem.isMissed)
+                    {
+                        Color.Red
+                    }
+                    else{
+                        colorResource(R.color.light_green)
+                    }
+                )
                 Text(
                     RingItem.day,
                     fontFamily = FontFamily.SansSerif,
@@ -79,4 +94,3 @@ fun RingItemDesign(RingItem : RingItem) {
     }
 }
 
-data class RingItem(var image : Int , var name : String ,var day : String , var time : String)

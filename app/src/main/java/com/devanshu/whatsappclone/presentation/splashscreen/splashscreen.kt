@@ -29,8 +29,8 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(navHostController: NavHostController) {
-    LaunchedEffect(key1 = true){
-        delay(1000L)
+    LaunchedEffect(Unit){
+        delay(2000L)
         navHostController.navigate(Routes.WelcomeScreen)
         {
             popUpTo(Routes.SplashScreen){inclusive = true}

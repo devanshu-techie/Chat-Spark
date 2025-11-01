@@ -60,7 +60,6 @@ fun pulse() {
                         .clip(
                             RoundedCornerShape(20)
                         )
-                        .clickable(onClick = {})
                 )
             }
         },

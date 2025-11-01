@@ -20,4 +20,14 @@ sealed class Routes{
     companion object {
 
     }
+
+    @Serializable
+    data object pulse : Routes()
+
+    @Serializable
+    data object NexusScreen : Routes()
+
+    @Serializable
+    data object Ring : Routes()
+
 }
